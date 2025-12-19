@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+venv_wsl/
+
+# Spark streaming outputs / checkpoints
+data/
+checkpoint/
+*.crc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Docker volumes (if any)
+pgdata/

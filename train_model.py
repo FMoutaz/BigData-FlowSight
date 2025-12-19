@@ -4,11 +4,15 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 import joblib
-
+import os
+from glob import glob
 # ─── 1) Load all Bronze Parquet files ───────────────────────────
-folder = Path('data/bronze_py')
-files = list(folder.glob('*.parquet'))
-print(f"Found {len(files)} parquet files.")
+DATA_DIR = "data/bronze"
+files = glob(os.path.join(DATA_DIR, "*.parquet"))
+
+print(f"Found {len(files)} parquet files:")
+for f in files[:5]:
+    print(f" - {f}")
 df = pd.concat([pd.read_parquet(f) for f in files], ignore_index=True)
 
 # ─── 2) Basic cleaning & timestamp feature ─────────────────────
