@@ -17,7 +17,7 @@ SENSOR_COORDS = {
 }
 
 
-# Sidebar controls
+#Sidebar controls for user input
 sensor = st.sidebar.selectbox("Choose sensor", SENSOR_CHOICES)
 speed_input = st.sidebar.slider("Current speed", min_value=0, max_value=100, value=50)
 timestamp = int(time.time())
