@@ -3,7 +3,6 @@ import requests
 import pandas as pd
 import time
 from datetime import datetime
-
 st.set_page_config(page_title="FlowSight Dashboard", layout="wide")
 
 st.title("🛣️ FlowSight Live Congestion Dashboard")
